@@ -1,0 +1,133 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>APS | Goal Proficiency & Growth</title><script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script><style>
+:root{--blue:#0f4e67;--ink:#173246;--muted:#657786;--line:#dce5ea;--bg:#f4f7f9;--on:#4e7faa;--off:#ed872b}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px Arial,Helvetica,sans-serif}header{background:white;border-bottom:1px solid var(--line)}.top{max-width:1500px;margin:auto;padding:22px 30px;display:flex;justify-content:space-between;align-items:center;gap:15px;border-top:5px solid var(--blue)}h1{font-size:27px;letter-spacing:-.5px;margin:0 0 7px}h2{font-size:17px;margin:0}.sub{color:var(--muted);font-size:13px}.brand{font-size:13px;font-weight:700;color:var(--blue);letter-spacing:1px;white-space:nowrap}.shell{max-width:1500px;margin:0 auto;padding:22px 30px 30px}.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-bottom:17px}.kpi,.panel,.filters{background:#fff;border:1px solid var(--line);border-radius:9px}.kpi{padding:18px 19px}.kpi .value{font-size:30px;font-weight:700;letter-spacing:-1px}.kpi .label{font-size:12px;color:var(--muted);margin-top:7px}.filters{padding:16px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr)) 1.2fr;gap:13px;margin-bottom:17px;align-items:end}label{display:block;font-size:11px;color:#526879;font-weight:700;margin-bottom:7px}select,input,button{font:inherit}select,input[type=search]{width:100%;border:1px solid #cad7de;border-radius:5px;background:#fff;padding:10px 9px;color:var(--ink);min-width:0}button{border:1px solid #cbd8df;background:#fff;color:var(--blue);border-radius:5px;padding:9px 12px;cursor:pointer;font-weight:700}button:hover{background:#edf5f8}.main{display:grid;grid-template-columns:minmax(0,1.85fr) minmax(360px,1fr);gap:16px}.panel{min-width:0;overflow:hidden}.panel-head{padding:19px 20px 12px;display:flex;justify-content:space-between;gap:12px;align-items:start}.panel-head p{color:var(--muted);font-size:12px;margin:7px 0 0;line-height:1.5}.legend{display:flex;gap:14px;font-size:12px;white-space:nowrap;color:#526879}.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px}.chart-area{height:510px;padding:0 14px 12px 7px;position:relative}.table-tools{display:flex;gap:8px;padding:0 16px 12px}.table-tools input{flex:1}.scroll{max-height:505px;overflow:auto}table{width:100%;border-collapse:collapse;font-size:12px}thead{position:sticky;top:0;background:#f4f7f9;z-index:2}th{text-align:left;color:#506879;font-size:11px;padding:11px 10px;border-bottom:1px solid var(--line);cursor:pointer;white-space:nowrap}td{padding:10px;border-bottom:1px solid #e9eef1}td.num{text-align:right;font-variant-numeric:tabular-nums}th.num{text-align:right}tbody tr{cursor:pointer}tbody tr:hover{background:#f0f6f9}tbody tr.selected{background:#e5f1f7}tbody tr.dim{opacity:.45}.status{font-weight:700;white-space:nowrap}.status.on{color:#376d97}.status.off{color:#bf6518}.foot{display:flex;justify-content:space-between;gap:15px;align-items:center;padding:16px 2px;color:#71828e;font-size:11px}.empty{padding:25px;color:var(--muted);line-height:1.6}.notice{padding:12px 15px;background:#fff9e8;border:1px solid #e8d59e;border-radius:6px;margin-bottom:15px;color:#665222}.actions{display:flex;gap:7px;flex-wrap:wrap}.help{padding:12px 20px;border-top:1px solid var(--line);color:var(--muted);font-size:11px;line-height:1.5}button:disabled{opacity:.6;cursor:wait}.sync-state{font-size:11px;color:var(--muted);align-self:center}@media(max-width:1050px){.main{grid-template-columns:1fr}.scroll{max-height:400px}}@media(max-width:700px){.shell{padding:14px}.top{padding:17px}.kpis{grid-template-columns:repeat(2,1fr)}.filters{grid-template-columns:repeat(2,minmax(0,1fr))}.filters>div:last-child{grid-column:1/-1}.chart-area{height:370px}.panel-head{flex-wrap:wrap}h1{font-size:22px}.brand{font-size:11px}.foot{flex-direction:column;align-items:start}}
+
+/* Student Voice Explorer-inspired visual system */
+:root{--blue:#0d506a;--ink:#172736;--muted:#8093a5;--line:#e0e9ef;--bg:#f3f6f8;--on:#4e7faa;--off:#ed872b}
+body{background:var(--bg);font:14px Arial,Helvetica,sans-serif;color:var(--ink)}
+header{background:transparent;border:0}
+.top{max-width:1480px;margin:10px auto 0;padding:37px 46px 24px;border:0;background:#fff;border-radius:25px 25px 0 0;align-items:flex-start}
+.header-copy{min-width:0}.brand{font-size:12px;letter-spacing:2.2px;color:#1583b3;font-weight:800;white-space:normal;margin-bottom:17px}
+h1{font-size:34px;letter-spacing:-1.2px;line-height:1.15;margin:0 0 9px;color:#192b3b}
+.sub{font-size:14px;color:#8194a6;line-height:1.5}
+.header-tag{border:1px solid var(--line);border-radius:30px;padding:13px 17px;color:#566c81;font-size:12px;white-space:nowrap;margin-top:2px}
+.shell{max-width:1480px;padding:15px 46px 35px;background:white;margin:0 auto 24px;border-radius:0 0 25px 25px;min-height:70vh}
+.filters,.panel,.kpi{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:none}
+.filters{padding:24px;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px 13px;margin:0 0 20px;align-items:end}
+.filter-heading{grid-column:1/-1;display:flex;justify-content:space-between;align-items:baseline;margin-bottom:3px}
+.filter-heading h2{font-size:19px;letter-spacing:-.35px}.filter-heading p{font-size:12px;color:#91a0ae;margin:0}
+.filters label{font-size:12px;color:#566e82;font-weight:700;margin-bottom:9px;text-transform:none}
+.filters select,.filters input[type=search]{background:#f7f9fb;border:1px solid #e4ebf0;border-radius:10px;height:46px;padding:10px 12px;font-size:13px}
+.filters>div:last-child{grid-column:auto}
+.results-intro{font-size:12px;color:#8a9bad;margin:0 0 12px}
+.kpis{grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:21px}
+.kpi{padding:20px 22px;min-height:112px;position:relative}
+.kpi:after{content:'';position:absolute;right:19px;top:18px;width:9px;height:9px;border:5px solid #edf8fc;background:#c5eaf9;border-radius:50%}
+.kpi .value{font-size:31px;letter-spacing:-1px;color:#172b3d}.kpi .label{font-size:13px;color:#8498aa;margin-top:8px}
+.main{grid-template-columns:minmax(0,1.75fr) minmax(360px,1fr);gap:16px}
+.panel-head{padding:23px 23px 17px}.panel-head h2{font-size:19px;letter-spacing:-.4px}.panel-head p{font-size:12px;color:#899cab}
+.chart-area{height:510px;padding:4px 15px 15px 8px}
+.help{padding:16px 22px;color:#8799a8;border-top:1px solid #edf1f4;font-size:12px}
+button{border-radius:9px;border:1px solid #dce9f0;background:#edf8fd;color:#0877a6;padding:11px 14px;font-size:12px}
+button:hover{background:#def1fa}
+#sync,#download{background:#0d506a;color:white;border-color:#0d506a}
+#sync:hover,#download:hover{background:#0a4056}
+.table-tools{padding:0 20px 16px;align-items:center;flex-wrap:wrap}
+.scroll{max-height:505px}thead{background:#f6f9fb}th{color:#567087;font-size:10px;letter-spacing:.2px}td{padding:11px 10px;color:#344d60}
+.foot{color:#93a3af;font-size:11px;padding:22px 2px}
+.notice{border-radius:10px}
+@media(max-width:1200px){.filters{grid-template-columns:repeat(3,minmax(0,1fr))}.main{grid-template-columns:1fr}.scroll{max-height:410px}}
+@media(max-width:760px){.top{margin:0;padding:25px 20px 16px;border-radius:0;display:block}.header-tag{display:inline-block;margin-top:16px}.shell{padding:12px 16px 25px;border-radius:0}.filters{grid-template-columns:repeat(2,minmax(0,1fr));padding:17px}.filter-heading{display:block}.filter-heading p{margin-top:8px}.filters>div:last-child{grid-column:1/-1}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.kpi{padding:17px;min-height:100px}.kpi .value{font-size:27px}.chart-area{height:390px}h1{font-size:28px}.brand{font-size:10px;line-height:1.5}.panel-head{flex-wrap:wrap}.foot{flex-direction:column;align-items:start}}
+@media(max-width:420px){.filters{grid-template-columns:1fr}.filters>div:last-child{grid-column:auto}.kpis{gap:9px}.kpi{padding:14px}.kpi .label{font-size:11px}.legend{flex-wrap:wrap}}
+
+/* Header actions and site QR */
+.header-sync{display:flex;align-items:center;gap:11px;flex-wrap:wrap;margin-bottom:18px}
+.header-sync #sync{padding:9px 16px;min-height:38px}
+.heading-row{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-bottom:7px}
+.heading-row h1{margin:0}
+.site-qr{width:78px;height:78px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid var(--line);border-radius:11px;padding:6px;flex:0 0 auto}
+.site-qr img,.site-qr canvas{display:block;max-width:100%;max-height:100%}
+.qr-placeholder{font-size:9px;text-align:center;color:#7d91a3;line-height:1.25}
+@media(max-width:760px){.heading-row{gap:12px}.site-qr{width:68px;height:68px}.header-sync{margin-bottom:15px}}
+</style></head><body><header><div class="top"><div class="header-copy"><div class="header-sync"><button id="sync" type="button" title="Refresh data from the published Google Sheets CSV">↻ Sync</button><span id="sync-state" class="sync-state" role="status" aria-live="polite"></span></div><div class="brand">ALBUQUERQUE PUBLIC SCHOOLS / STRATEGIC ANALYSIS &amp; PROGRAM RESEARCH (SAPR)</div><div class="heading-row"><h1>Goal Proficiency &amp; Growth</h1><div id="site-qr" class="site-qr" role="img" aria-label="QR code linking to this dashboard" title="Scan to open this dashboard"><span class="qr-placeholder">QR on published site</span></div></div><div class="sub">Explore school performance across assessments, grades, and testing windows.</div></div><div class="header-tag">School Performance Dashboard</div></div></header><main class="shell"><div id="notice" class="notice" hidden></div><section class="filters"><div class="filter-heading"><div><h2>Explore school results</h2><p>Choose an assessment, school year, testing window, grade and metric</p></div></div><div><label for="subject">SUBJECT</label><select id="subject"></select></div><div><label for="year">SCHOOL YEAR</label><select id="year"></select></div><div><label for="window">TESTING WINDOW</label><select id="window"></select></div><div><label for="grade">GRADE</label><select id="grade"></select></div><div><label for="metric">METRIC</label><select id="metric"></select></div><div><label for="search">FIND A SCHOOL</label><input type="search" id="search" placeholder="Search by school name"></div></section><div class="results-intro">School performance overview</div><section class="kpis"><div class="kpi"><div class="value" id="schools">—</div><div class="label">Schools in view</div></div><div class="kpi"><div class="value" id="onrate">—</div><div class="label">Schools on track</div></div><div class="kpi"><div class="value" id="growth">—</div><div class="label">Median growth · percentage points</div></div><div class="kpi"><div class="value" id="prof">—</div><div class="label">Median proficiency rate</div></div></section><section class="main"><article class="panel"><div class="panel-head"><div><h2>Growth vs. proficiency</h2><p>Each dot represents a school. Select a dot or table row to highlight a school.</p></div><div class="legend"><span><i class="dot" style="background:var(--on)"></i>On-Track</span><span><i class="dot" style="background:var(--off)"></i>Off-Track</span></div></div><div class="chart-area"><canvas id="plot" role="img" aria-label="Scatterplot of school growth and proficiency"></canvas></div><div class="help">Growth is expressed as a percentage in the data; the horizontal axis represents percentage-point growth since baseline. The dotted vertical line marks zero growth, not necessarily the official On-Track threshold. Status is taken from the source when available.</div></article><article class="panel"><div class="panel-head"><div><h2>School performance</h2><p id="tablecount">Select a school to highlight its position in the chart.</p></div><button id="clear">Clear selection</button></div><div class="table-tools"><button id="download">Export filtered CSV</button></div><div class="scroll"><table><thead><tr><th data-sort="name">SCHOOL NAME ↕</th><th data-sort="status">STATUS ↕</th><th class="num" data-sort="growth">GROWTH ↕</th><th class="num" data-sort="prof">PROFICIENCY ↕</th></tr></thead><tbody id="rows"></tbody></table></div></article></section><footer class="foot"><span>Source: APS internal NM-MSSA, Amira, and i-Ready extracts. Data loaded from the published APS CSV.</span><span>Strategic Analysis &amp; Program Research · November 6, 2026</span></footer></main><script>
+const SOURCE='https://docs.google.com/spreadsheets/d/e/2PACX-1vRqql2MkhBsWPVmZVEaofweeoaww1ek9KvXXt6RPq65yzetiJMtQ2Y47l4jDhr6CTzKVdLKu2YSfmwr/pub?output=csv';
+let data=[],view=[],selected=null,sortKey='name',sortDir=1,chart=null;const $=id=>document.getElementById(id);const norm=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'');
+function csvParse(s){let out=[],row=[],cell='',q=false;for(let i=0;i<s.length;i++){let c=s[i];if(c==='"'){if(q&&s[i+1]==='"'){cell+='"';i++}else q=!q}else if(c===','&&!q){row.push(cell);cell=''}else if((c==='\n'||c==='\r')&&!q){if(c==='\r'&&s[i+1]==='\n')i++;row.push(cell);if(row.some(x=>x.trim()))out.push(row);row=[];cell=''}else cell+=c}row.push(cell);if(row.some(x=>x.trim()))out.push(row);return out}
+function detect(headers,terms,exclude=[]){let n=headers.map(norm);for(let term of terms){let idx=n.findIndex(x=>x===norm(term));if(idx>=0)return idx}for(let term of terms){let idx=n.findIndex(x=>x.includes(norm(term))&&!exclude.some(e=>x.includes(norm(e))));if(idx>=0)return idx}return -1}
+function numeric(v){let n=Number(String(v??'').replace(/[,%]/g,'').trim());return Number.isFinite(n)&&String(v??'').trim()!==''?n:null}
+// Normalize published-sheet percentage values to percentage-point units for charting.
+// Explicit % strings are already on a 0–100 scale. Numeric fractions (e.g., 0.25)
+// are multiplied by 100 when the corresponding column is stored as fractions.
+function percentageScale(values){
+ const plain=values.filter(v=>v!==null&&v!==undefined&&String(v).trim()!==''&&!String(v).includes('%')).map(numeric).filter(Number.isFinite);
+ if(!plain.length)return 1;
+ return plain.every(v=>Math.abs(v)<=1) ? 100 : 1;
+}
+function percentageValue(raw,scale){
+ const n=numeric(raw);
+ return n===null?null:n*(String(raw).includes('%')?1:scale);
+}
+function parseData(text){
+ const rows=csvParse(text.replace(/^\ufeff/,''));
+ if(rows.length<2)throw Error('CSV has no data rows.');
+ const h=rows.shift();
+ const cols={name:detect(h,['school name','schoolname','school']),status:detect(h,['status','on track','ontrack']),growth:detect(h,['growth since baseline','percentage point growth since baseline','growth','pp growth']),prof:detect(h,['proficiency rate','percent proficient','% proficient','proficient','proficiency']),metric:detect(h,['metric']),value:detect(h,['value']),subject:detect(h,['subject','content area','assessment subject']),year:detect(h,['school year','schoolyear','year']),window:detect(h,['testing window','testingwindow','window']),grade:detect(h,['grade level','grade'])};
+ if(cols.name<0||cols.growth<0||(cols.prof<0&&cols.value<0))throw Error('Could not identify school, growth, and proficiency/value columns. Found: '+h.join(' | '));
+ const get=(r,k)=>cols[k]>=0?String(r[cols[k]]??'').trim():'';
+ const profRaw=rows.map(r=>cols.prof>=0?String(r[cols.prof]??''):String(r[cols.value]??''));
+ const growthRaw=rows.map(r=>String(r[cols.growth]??''));
+ const profScale=percentageScale(profRaw),growthScale=percentageScale(growthRaw);
+ const incoming=rows.map((r,i)=>{
+   const metric=get(r,'metric');
+   // When Value is a generic metric column, only use rows identifying proficiency.
+   const genericValue=cols.prof<0;
+   if(genericValue&&cols.metric>=0&&!/proficien|proficient|percent.*meeting|meeting.*standard/i.test(metric))return null;
+   return {id:i,name:get(r,'name'),status:get(r,'status'),growth:percentageValue(get(r,'growth'),growthScale),prof:percentageValue(genericValue?get(r,'value'):get(r,'prof'),profScale),subject:get(r,'subject')||'All subjects',year:get(r,'year')||'All years',window:get(r,'window')||'All windows',grade:get(r,'grade')||'All grades',metric:metric||'Not specified'};
+ }).filter(r=>r&&r.name&&r.growth!==null&&r.prof!==null);
+ if(!incoming.length)throw Error('No valid proficiency records found. Check the Metric labels and the Value / Proficiency Rate cells.');
+ const previous=Object.fromEntries(['subject','year','window','grade','metric'].map(k=>[k,$(k).value]));
+ data=incoming;selected=null;initFilters();
+ for(const k of ['subject','year','window','grade','metric'])if([...$(k).options].some(o=>o.value===previous[k]))$(k).value=previous[k];
+ render();$('notice').hidden=true;
+}
+function initFilters(){for(let key of ['subject','year','window','grade','metric']){let vals=[...new Set(data.map(r=>r[key]))].sort((a,b)=>key==='year'?b.localeCompare(a):a.localeCompare(b,undefined,{numeric:true}));$(key).replaceChildren(...vals.map(v=>{let o=document.createElement('option');o.value=v;o.textContent=v;return o}));if(key==='year')$(key).value=vals[0];if(key==='window'){let v=vals.find(x=>norm(x)==='eoy');if(v)$(key).value=v}if(key==='grade'){let v=vals.find(x=>norm(x)==='grade3');if(v)$(key).value=v}}}
+function median(a){if(!a.length)return null;let x=[...a].sort((a,b)=>a-b),m=Math.floor(x.length/2);return x.length%2?x[m]:(x[m-1]+x[m])/2}const pct=n=>n===null?'—':n.toFixed(1)+'%';const pp=n=>n===null?'—':(n>0?'+':'')+n.toFixed(1)+'%';function isOn(s){return /^(on.?track|yes|true|1)$/i.test(s.trim())}function status(r){return r.status||'Not reported'}
+function render(){let q=$('search').value.trim().toLowerCase();view=data.filter(r=>['subject','year','window','grade','metric'].every(k=>r[k]===$(k).value)&&r.name.toLowerCase().includes(q));$('schools').textContent=view.length;let known=view.filter(r=>/on.?track|off.?track/i.test(r.status));$('onrate').textContent=known.length?Math.round(100*known.filter(r=>isOn(r.status)).length/known.length)+'%':'—';$('growth').textContent=pp(median(view.map(r=>r.growth)));$('prof').textContent=pct(median(view.map(r=>r.prof)));$('tablecount').textContent=view.length+' school records in the selected view';renderTable();renderChart()}
+function renderTable(){let rows=[...view].sort((a,b)=>{let x=a[sortKey],y=b[sortKey];return sortDir*(typeof x==='number'?x-y:String(x).localeCompare(String(y)))});let body=$('rows');body.replaceChildren();if(!rows.length){let tr=document.createElement('tr'),td=document.createElement('td');td.colSpan=4;td.className='empty';td.textContent='No schools match these filters.';tr.append(td);body.append(tr);return}for(let r of rows){let tr=document.createElement('tr');if(selected!==null)tr.className=r.id===selected?'selected':'dim';for(let [v,cl] of [[r.name,''],[status(r),'status '+(isOn(r.status)?'on':'off')],[pp(r.growth),'num'],[pct(r.prof),'num']]){let td=document.createElement('td');td.textContent=v;td.className=cl;tr.append(td)}tr.onclick=()=>{selected=selected===r.id?null:r.id;renderTable();renderChart()};body.append(tr)}}
+const zeroLine={id:'zeroLine',afterDraw(c){let x=c.scales.x;if(!x||x.min>0||x.max<0)return;let ctx=c.ctx;ctx.save();ctx.strokeStyle='#9daeb9';ctx.setLineDash([4,4]);ctx.lineWidth=1.2;ctx.beginPath();ctx.moveTo(x.getPixelForValue(0),c.chartArea.top);ctx.lineTo(x.getPixelForValue(0),c.chartArea.bottom);ctx.stroke();ctx.restore()}};
+function renderChart(){if(!window.Chart){$('notice').hidden=false;$('notice').textContent='Chart.js could not load. Connect to the internet to display the scatterplot; the table remains usable.';return}let groups=[{on:true,color:'#4e7faa',label:'On-Track'},{on:false,color:'#ed872b',label:'Off-Track'}];let ds=groups.map(g=>({label:g.label,data:view.filter(r=>isOn(r.status)===g.on).map(r=>({x:r.growth,y:r.prof,record:r})),backgroundColor:view.filter(r=>isOn(r.status)===g.on).map(r=>selected===null||r.id===selected?g.color:g.color+'38'),pointRadius:view.filter(r=>isOn(r.status)===g.on).map(r=>r.id===selected?8:5),pointHoverRadius:8,borderColor:'#fff',borderWidth:1}));let opts={responsive:true,maintainAspectRatio:false,animation:{duration:180},plugins:{legend:{display:false},tooltip:{callbacks:{title:items=>items[0]?.raw.record.name||'',label:item=>{let r=item.raw.record;return ['Growth: '+pp(r.growth),'Proficiency: '+pct(r.prof),'Status: '+status(r)]}}}},onClick:(event,elements)=>{if(elements.length){let el=elements[0],r=chart.data.datasets[el.datasetIndex].data[el.index].record;selected=selected===r.id?null:r.id;renderTable();renderChart()}},scales:{x:{min:Math.floor(Math.min(0,...data.map(r=>r.growth))-5)/10*10,max:Math.ceil(Math.max(0,...data.map(r=>r.growth))+5)/10*10,title:{display:true,text:'Percentage Point Growth',color:'#526879',font:{size:12,weight:'bold'}},grid:{color:'#eaf0f3'},ticks:{stepSize:2,precision:0,callback:v=>Number(v).toFixed(0)+'%',color:'#687d8c'}},y:{title:{display:true,text:'Students proficient (%)',color:'#526879',font:{size:12,weight:'bold'}},grid:{color:'#eaf0f3'},ticks:{callback:v=>v+'%',color:'#687d8c'},suggestedMin:0,suggestedMax:100}}};if(chart){chart.data.datasets=ds;chart.options=opts;chart.update()}else chart=new Chart($('plot'),{type:'scatter',data:{datasets:ds},options:opts,plugins:[zeroLine]})}
+for(let k of ['subject','year','window','grade','metric','search'])$(k).addEventListener(k==='search'?'input':'change',()=>{selected=null;render()});document.querySelectorAll('th[data-sort]').forEach(th=>th.onclick=()=>{let k=th.dataset.sort;sortDir=sortKey===k?-sortDir:1;sortKey=k;renderTable()});$('clear').onclick=()=>{selected=null;renderTable();renderChart()};$('sync').onclick=()=>
+function initSiteQR(){
+  const node=$('site-qr');
+  // Use the actual deployed page address rather than assuming a GitHub repository name.
+  if(location.protocol!=='https:'&&location.protocol!=='http:')return;
+  const target=new URL(location.href);target.hash='';target.search='';
+  if(typeof QRCode!=='function'){
+    node.querySelector('.qr-placeholder').textContent='QR unavailable';
+    return;
+  }
+  node.replaceChildren();
+  new QRCode(node,{text:target.toString(),width:64,height:64,colorDark:'#172736',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.M});
+  node.title='Scan to open '+target.toString();
+}
+initSiteQR();
+
+syncData();$('download').onclick=()=>{let h=['School Name','Status','Growth Since Baseline (%)','Proficiency (%)','Subject','School Year','Testing Window','Grade','Metric'];let csv=[h,...view.map(r=>[r.name,r.status,r.growth,r.prof,r.subject,r.year,r.window,r.grade,r.metric])].map(a=>a.map(v=>'"'+String(v??'').replace(/"/g,'""')+'"').join(',')).join('\r\n');let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));a.download='aps_school_growth_filtered.csv';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};function showError(s){$('notice').hidden=false;$('notice').textContent='Unable to refresh the published CSV: '+s+'. Existing dashboard data, if available, has been retained.'}
+async function syncData(){const btn=$('sync'),state=$('sync-state');btn.disabled=true;btn.textContent='↻ Syncing…';state.textContent='Fetching published Google Sheets CSV…';try{const response=await fetch(SOURCE,{cache:'no-store',redirect:'follow'});if(!response.ok)throw Error('HTTP '+response.status);const csv=await response.text();if(/^\s*<!doctype html|^\s*<html/i.test(csv))throw Error('Google returned an HTML page rather than CSV data');parseData(csv);const time=new Date().toLocaleTimeString([],{hour:'numeric',minute:'2-digit'});state.textContent='CSV synced '+time;state.title='Last successful refresh: '+new Date().toLocaleString()}catch(error){showError(error.message);state.textContent='Sync failed · check published CSV access'}finally{btn.disabled=false;btn.textContent='↻ Sync'}}
+
+function initSiteQR(){
+  const node=$('site-qr');
+  // Use the actual deployed page address rather than assuming a GitHub repository name.
+  if(location.protocol!=='https:'&&location.protocol!=='http:')return;
+  const target=new URL(location.href);target.hash='';target.search='';
+  if(typeof QRCode!=='function'){
+    node.querySelector('.qr-placeholder').textContent='QR unavailable';
+    return;
+  }
+  node.replaceChildren();
+  new QRCode(node,{text:target.toString(),width:64,height:64,colorDark:'#172736',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.M});
+  node.title='Scan to open '+target.toString();
+}
+initSiteQR();
+
+syncData();
+</script></body></html>
